@@ -1,6 +1,4 @@
 import { WorkoutDataType } from '@/types/workoutsType';
-import React from 'react';
-
 const getWorkouts = async():Promise<WorkoutDataType[]> => {
     const res = await fetch('https://api.abcz.workers.dev/api/fitlog');
     if(!res.ok){

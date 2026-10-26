@@ -14,8 +14,8 @@ const Navbar = () => {
                 </div>
                 {/* middle navigations container */}
                 <div className='flex items-center gap-6'>
-                    <Link href="" className='block'>Workout</Link>
-                    <Link href="" className='block'>My Plan</Link>
+                    <Link href="/" className='block hover:text-[#ccff00]'>Workout</Link>
+                    <Link href="" className='block hover:text-[#ccff00]'>My Plan</Link>
                 </div>
                 {/* right side container  */}
                 <div className='flex items-center gap-5'>
