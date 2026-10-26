@@ -4,8 +4,8 @@ import Image from 'next/image';
 import banner from '../../public/images/banner.png'
 const Hero = () => {
     return (
-        <div className="bg-[#111111] text-white mt-10">
-            <div className="container mx-auto flex flex-col-reverse items-center md:flex-row justify-between px-1">
+        <div className="text-white mt-10 px-1">
+            <div className="container mx-auto flex flex-col-reverse items-center md:flex-row justify-between  bg-[#1b1b1b] border rounded-xl border-transparent p-5">
 
                 {/* Left side: Text content */}
                 <div>

@@ -21,7 +21,7 @@ const Navbar = () => {
                 <div className='flex items-center gap-5'>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Plan</span>
-                        <span className='block bg-[#ccff00] border rounded-full text-black p-0.5'>{0}</span>
+                        <span className='flex items-center justify-center bg-[#ccff00] border h-5 w-5 rounded-full text-black p-0.5'>{0}</span>
                     </div>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Saved</span>

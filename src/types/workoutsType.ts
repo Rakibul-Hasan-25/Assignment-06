@@ -14,3 +14,7 @@ export interface WorkoutDataType {
   description: string;
   instructions: string[];
 }
+
+export interface WorkoutCardProps{
+    workout:WorkoutDataType;
+}
