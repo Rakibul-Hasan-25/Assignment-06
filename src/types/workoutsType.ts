@@ -28,6 +28,8 @@ export interface WorkoutContextType {
     removeFromSaved: (id: number) => void;
     activeTab: string;
     setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+    dropDown:string;
+    setDropDown:React.Dispatch<React.SetStateAction<string>>;
 };
 
 export interface AddPlanDataType {

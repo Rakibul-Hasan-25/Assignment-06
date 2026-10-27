@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Dumbbell } from "lucide-react";
 
@@ -16,7 +15,7 @@ export default function NotFound() {
       </h1>
 
       <p className="mt-4 max-w-md text-neutral-400">
-        This page doesn't exist or the workout you're looking for is unavailable.
+        This page doesn&apos;t exist or the workout you&apos;re looking for is unavailable.
       </p>
 
       <Link

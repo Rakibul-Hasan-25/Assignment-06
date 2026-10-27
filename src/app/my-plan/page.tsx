@@ -6,6 +6,7 @@ import TotalCalories from '@/components/count/TotalCalories';
 import TodaysPlan from '@/components/buttons/TodaysPlan';
 import SavedPlan from '@/components/buttons/SavedPlan';
 import PlanViewHandler from '@/components/PlanViewHandler';
+import SortPlan from '@/components/buttons/SortPlan';
 const page = () => {
     return (
         <main className=" bg-[#111111] px-1 py-10 text-white">
@@ -57,12 +58,18 @@ const page = () => {
 
                 </div>
 
-                {/* Tabs - visual only for now */}
+                {/* Tabs - visual only for now and sort menu container*/}
+                <div className='flex justify-between'>
+                {/* left side of the container */}
                 <div className="mb-8 flex gap-6 border-b border-neutral-800">
                     <div><TodaysPlan/></div>
                     <div><SavedPlan/></div>
                 </div>
-
+                {/* right side of the container */}
+                <div>
+                    <SortPlan/>
+                </div>
+                </div>
                 {/* either empty or todays plan or saved plan will be displayed here */}
                 <div>
                     <PlanViewHandler/>
