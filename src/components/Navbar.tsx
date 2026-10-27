@@ -1,8 +1,11 @@
-import React from 'react';
+"use client"
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png';
 import Link from 'next/link';
+import { WorkoutContext } from '@/context/WorkoutContextProvider';
 const Navbar = () => {
+    const getWorkoutcontext = useContext(WorkoutContext);
     return (
         <div>
             {/* Navbar sub container */}
@@ -15,13 +18,13 @@ const Navbar = () => {
                 {/* middle navigations container */}
                 <div className='flex items-center gap-6'>
                     <Link href="/" className='block hover:text-[#ccff00]'>Workout</Link>
-                    <Link href="" className='block hover:text-[#ccff00]'>My Plan</Link>
+                    <Link href="/my-plan" className='block hover:text-[#ccff00]'>My Plan</Link>
                 </div>
                 {/* right side container  */}
                 <div className='flex items-center gap-5'>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Plan</span>
-                        <span className='flex items-center justify-center bg-[#ccff00] border h-5 w-5 rounded-full text-black p-0.5'>{0}</span>
+                        <span className='flex items-center justify-center bg-[#ccff00] border h-5 w-5 rounded-full text-black p-0.5'>{getWorkoutcontext?.plannedWorkouts.length}</span>
                     </div>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Saved</span>
