@@ -134,7 +134,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
                         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                             {/* adds button */}
                             <AddPlan workout={workout}/>
-                            <SaveLater />
+                            <SaveLater workout={workout}/>
                         </div>
 
                     </div>

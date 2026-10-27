@@ -26,6 +26,8 @@ export interface WorkoutContextType {
     saveForLater: (workout: WorkoutDataType) => void;
     removeFromPlan: (id: number) => void;
     removeFromSaved: (id: number) => void;
+    activeTab: string;
+    setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export interface AddPlanDataType {

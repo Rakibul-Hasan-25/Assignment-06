@@ -1,11 +1,9 @@
-"use client"
-import React, { useContext } from 'react';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png';
 import Link from 'next/link';
-import { WorkoutContext } from '@/context/WorkoutContextProvider';
+import TotalExercises from './count/TotalExercises';
+import TotalSaved from './count/TotalSaved';
 const Navbar = () => {
-    const getWorkoutcontext = useContext(WorkoutContext);
     return (
         <div>
             {/* Navbar sub container */}
@@ -24,11 +22,11 @@ const Navbar = () => {
                 <div className='flex items-center gap-5'>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Plan</span>
-                        <span className='flex items-center justify-center bg-[#ccff00] border h-5 w-5 rounded-full text-black p-0.5'>{getWorkoutcontext?.plannedWorkouts.length}</span>
+                        <span className='flex items-center justify-center bg-[#ccff00] border h-5 w-5 rounded-full text-black p-0.5'><TotalExercises/></span>
                     </div>
                     <div className='flex items-center gap-2'>
                         <span className='block'>Saved</span>
-                        <span className='block'>{0}</span>
+                        <span className='block'><TotalSaved/></span>
                     </div>
                 </div>
             </div>

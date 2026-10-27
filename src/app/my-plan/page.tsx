@@ -1,11 +1,11 @@
 import React from 'react';
-import Link from "next/link";
-import { Dumbbell, Clock, Flame, CalendarDays, Bookmark } from "lucide-react";
+import { Dumbbell, Clock, Flame } from "lucide-react";
 import TotalExercises from '@/components/count/TotalExercises';
 import TotalMinutes from '@/components/count/TotalMinutes';
 import TotalCalories from '@/components/count/TotalCalories';
 import TodaysPlan from '@/components/buttons/TodaysPlan';
 import SavedPlan from '@/components/buttons/SavedPlan';
+import PlanViewHandler from '@/components/PlanViewHandler';
 const page = () => {
     return (
         <main className=" bg-[#111111] px-1 py-10 text-white">
@@ -59,33 +59,14 @@ const page = () => {
 
                 {/* Tabs - visual only for now */}
                 <div className="mb-8 flex gap-6 border-b border-neutral-800">
-                    <TodaysPlan/>
-                    <SavedPlan/>
+                    <div><TodaysPlan/></div>
+                    <div><SavedPlan/></div>
                 </div>
 
-                {/* Empty state */}
-                <div className="flex min-h-90 flex-col items-center justify-center rounded-2xl border border-dashed border-neutral-800 bg-[#151515] px-6 py-12 text-center">
-
-                    {/* Icon */}
-                    <div className="mb-6 flex size-16 items-center justify-center rounded-2xl border border-neutral-800 bg-[#202020]"><CalendarDays size={30} className="text-[#ccff00]" />
-                    </div>
-
-                    <p className="mb-3 text-xs font-bold tracking-[0.25em] text-[#ccff00]">YOUR NEXT SESSION STARTS HERE</p>
-
-                    <h2 className="text-2xl font-extrabold sm:text-3xl">NOTHING HERE YET</h2>
-
-                    <p className="mt-4 max-w-md text-sm leading-6 text-neutral-400">Browse the library and add a lift to get today moving.</p>
-
-                    <Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#ccff00] px-6 py-3 text-sm font-bold text-black transition hover:bg-[#dfff66]">
-                        <Dumbbell size={18} />Go to workouts</Link>
+                {/* either empty or todays plan or saved plan will be displayed here */}
+                <div>
+                    <PlanViewHandler/>
                 </div>
-
-                {/* Saved section icon hint */}
-                <div className="mt-8 flex items-center justify-center gap-2 text-xs text-neutral-600">
-                    <Bookmark size={14} />
-                    Your saved workouts will appear here, too.
-                </div>
-
             </div>
         </main>
     );
