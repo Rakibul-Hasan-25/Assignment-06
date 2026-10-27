@@ -3,12 +3,14 @@ import Image from 'next/image';
 import React from 'react';
 import AddPlan from '@/components/buttons/AddPlan';
 import SaveLater from '@/components/buttons/SaveLater';
+import { notFound } from 'next/navigation';
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
     if (!res.ok) {
-        throw new Error("Workout Data not found");
+        // throw new Error("Workout Data not found");
+        notFound();
     }
     const workout: WorkoutDataType = await res.json();
     return (

@@ -9,9 +9,11 @@ const Navbar = () => {
             {/* Navbar sub container */}
             <div className='flex justify-between container mx-auto py-3 px-1'>
                 {/* Left side logo and title */}
-                <div className='flex gap-2 items-center'>
+                <div>
+                    <Link href="/" className='flex gap-2 items-center'>
                     <Image src={logo} alt="fit-log logo" height={25} width={25} />
-                    <span className='uppercase font-bold'>fitlog</span>
+                    <span className='uppercase font-extrabold tracking-wider'>fitlog</span>
+                    </Link>
                 </div>
                 {/* middle navigations container */}
                 <div className='flex items-center gap-6'>
